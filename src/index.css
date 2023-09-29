@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+#sidebar {
+  width: 250px;
+  /* Adjust the width as needed */
+  background-color: #4b71ee;
+  /* Background color of the sidebar */
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+#sidebar h2{
+  margin-bottom: 20px;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+  border-bottom: #fff;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+#sidebar ul button {
+  font-size: 16px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+#sidebar ul button:hover {
+  background-color: #ffffff;
+  color: #4b71ee;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+#outerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+  background-color: #4b70ec38;
+  flex-wrap: wrap;
+    align-content: flex-start;
+    padding-top: 40px;
+}
+
+#displayContent {
+  margin-left: 250px;
+  /* Adjust margin to match the width of the sidebar */
+  padding: 20px;
+}
+
+/* Center align the entire content */
+#display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #4b70ec38;
+  flex-wrap: wrap;
+    align-content: flex-start;
+  /* Background color for the entire page */
+}
+
+/* Style the heading */
+#displayDiv {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 0px;
+  color: #4b71ee;
+  padding: 20px;
+  background-color: #4b70ec38;
+  /* Text color for the heading */
+}
+
+/* Style the table */
+#homeDisplay {
+  margin-left: 280px; /* Ensure enough space for the sidebar */
+  text-align: center;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 1200px;
+  /* Adjust the maximum width as needed */
+  background-color: #fff;
+  /* Background color for the table */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  /* Add a subtle shadow to the table */
+}
+
+#homeDisplay th,
+#homeDisplay td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #4b71ee  ;
+  /* Add a border at the bottom of each row */
+}
+
+#homeDisplay th {
+  background-color: #4b71ee;
+  /* Background color for table headers */
+  color: #fff;
+  /* Text color for table headers */
+}
+
+/* Style table rows on hover */
+#homeDisplay tr:hover {
+  background-color: #4b70ec38;
+  /* Background color when hovering over a row */
+}
+
+
