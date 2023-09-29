@@ -5,6 +5,11 @@ const Home = () => {
     const { employee } = useSelector((state) => state.employeeState);
     const dispatch = useDispatch();
 
+    const updateEmployee = (id) => ({
+        type: 'update',
+        payload: id,
+    });
+
     const removeEmployee = (id) => ({
         type: 'REMOVE_EMPLOYEE',
         payload:  id ,
@@ -12,9 +17,12 @@ const Home = () => {
 
     const handleRemoveEmployee = (id) => {
         // Dispatch the removeEmployee action with the employeeId
-        dispatch(removeEmployee(id));
-        
+        dispatch(removeEmployee(id));        
     };
+
+    const handleUpdateEmployee = (id) => {
+        dispatch(updateEmployee(id));
+    }
 
     return (
         <>
@@ -27,6 +35,7 @@ const Home = () => {
                             <th>Name</th>
                             <th>Last Name</th>
                             <th>Delete</th>
+                            <th>Update</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,6 +45,7 @@ const Home = () => {
                                 <td>{emp.name}</td>
                                 <td>{emp.lastName}</td>
                                 <td><button onClick={() => handleRemoveEmployee(emp.id)}>Remove</button></td>
+                                <td><button onClick={() => handleUpdateEmployee(emp.id)}>Update</button></td>
                             </tr>
                         ))}
                     </tbody>

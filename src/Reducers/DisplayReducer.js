@@ -1,3 +1,5 @@
+import { act } from "react-dom/test-utils";
+
 const value = {
     option: "home",
     id: '',
@@ -12,7 +14,9 @@ function DisplayReducer(state = value, action) {
             return {...state, option: "add_company"}
         }
         case "update":{
-            return {...state, option: "update"}
+            const id = action.payload;
+            console.log(id);
+            return {...state, option: "update", id: action.payload}
         }
         case "delete":{
             return {...state, option: "delete"}
