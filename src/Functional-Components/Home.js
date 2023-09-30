@@ -5,6 +5,8 @@ const Home = () => {
     const { employee } = useSelector((state) => state.employeeState);
     const dispatch = useDispatch();
 
+    employee.sort((a, b) => a.id - b.id);
+
     const updateEmployee = (id) => ({
         type: 'update',
         payload: id,

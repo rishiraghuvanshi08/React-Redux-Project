@@ -14,6 +14,14 @@ function EmployeeReducer(state = INITIAL_STATE, action) {
                 employee: [...state.employee, action.payload]
             }
         }
+        case 'UPDATE': {
+            const empId = action.payload.id;
+            const employeeList = state.employee.filter((emp) => emp.id !== empId);
+
+            return{
+                ...state, employee: [...employeeList, action.payload],
+            };
+        }
         case 'REMOVE_EMPLOYEE':
             const employeeId = action.payload;
             return {
